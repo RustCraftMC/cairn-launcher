@@ -1,0 +1,20 @@
+[package]
+name = "cairn-app"
+description = "CairnLauncher desktop UI"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "CairnLauncher"
+path = "src/main.rs"
+
+[dependencies]
+cairn-bridge.workspace = true
+cairn-i18n.workspace = true
+cairn-icons.workspace = true
+cairn-ui.workspace = true
+tokio = { version = "1.54", features = ["rt-multi-thread"] }
+
+[target.'cfg(windows)'.build-dependencies]
+winres = "0.1"

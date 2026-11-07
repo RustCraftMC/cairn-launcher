@@ -1,0 +1,12 @@
+[package]
+name = "cairn-ui-render"
+description = "cairn-ui render layer: Painter abstraction, tiny-skia CPU backend, text layout and glyph cache"
+version.workspace = true
+edition.workspace = true
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/xiaojiang233/cairn-ui"
+publish.workspace = true
+
+[dependencies]
+tiny-skia = { workspace = true }
+cosmic-text = { workspace = true }

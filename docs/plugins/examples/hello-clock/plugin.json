@@ -1,0 +1,30 @@
+{
+  "id": "example.hello-clock",
+  "name": "Hello clock",
+  "version": "1.1.0",
+  "description": "A clock widget with a greeting you can edit. Shows widget data, a bound progress bar, a toggle, an input, timers, storage and commands.",
+  "author": "CairnLauncher",
+  "api": 1,
+  "main": "main.js",
+  "widgets": [
+    {
+      "id": "clock",
+      "name": "Hello clock",
+      "icon": "clock",
+      "size": [4, 3],
+      "view": [
+        { "element": "text", "text": "{data.time}", "size": 32, "weight": "bold" },
+        { "element": "progress", "bind": "second", "max": 60 },
+        { "element": "text", "text": "{data.greeting}", "color": "secondary" },
+        { "element": "toggle", "label": "Show seconds", "key": "seconds", "command": "set-seconds" },
+        { "element": "input", "key": "greeting", "placeholder": "Type a greeting", "command": "set-greeting", "button": "Save" },
+        { "element": "button", "text": "Reset count", "action": { "type": "command", "command": "reset" } }
+      ]
+    }
+  ],
+  "commands": [
+    { "id": "reset", "title": "Reset the greeting count" },
+    { "id": "set-seconds", "title": "Show or hide seconds" },
+    { "id": "set-greeting", "title": "Change the greeting" }
+  ]
+}

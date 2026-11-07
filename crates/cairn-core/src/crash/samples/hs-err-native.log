@@ -1,0 +1,40 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffd989901ab, pid=22800, tid=9580
+#
+# JRE version: Java(TM) SE Runtime Environment (21.0.7+8) (build 21.0.7+8-LTS-245)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0.7+8-LTS-245, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# C  [glfw.dll+0x101ab]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfabric.dli.config=D:\Code\Java\Anthropic1.21.11\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=client -Dfabric.dli.main=net.fabricmc.loader.impl.launch.knot.KnotClient -Dfile.encoding=UTF-8 -Duser.country=CN -Duser.language=zh -Duser.variant net.fabricmc.devlaunchinjector.Main
+
+Host: Intel(R) Core(TM) i7-14700F, 28 cores, 31G,  Windows 11 , 64 bit Build 26100 (10.0.26100.3775)
+Time: Wed Jul 22 21:07:27 2026  Windows 11 , 64 bit Build 26100 (10.0.26100.3775) elapsed time: 30.838161 seconds (0d 0h 0m 30s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001c58af79f80):  JavaThread "Render thread"        [_thread_in_native, id=9580, stack(0x0000002220a00000,0x0000002220b00000) (1024K)]
+
+Stack: [0x0000002220a00000,0x0000002220b00000],  sp=0x0000002220afea70,  free space=1018k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [glfw.dll+0x101ab]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 14222  org.lwjgl.system.JNI.invokeV(DJ)V (0 bytes) @ 0x000001c59d15f39d [0x000001c59d15f340+0x000000000000005d]
+J 17378 c2 com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(I)V (37 bytes) @ 0x000001c59d6b0ddc [0x000001c59d6b0d60+0x000000000000007c]
+J 17195 c1 net.minecraft.client.MinecraftClient.render(Z)V (1033 bytes) @ 0x000001c59695aaac [0x000001c5969559a0+0x000000000000510c]
+j  net.minecraft.client.MinecraftClient.run()V+102
+j  net.minecraft.client.main.Main.main([Ljava/lang/String;)V+1488
+j  java.lang.invoke.LambdaForm$DMH+0x000001c5b4080000.invokeStaticInit(Ljava/lang/Object;Ljava/lang/Object;)V+10 java.base@21.0.7

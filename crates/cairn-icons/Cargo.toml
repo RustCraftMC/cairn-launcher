@@ -1,0 +1,10 @@
+[package]
+name = "cairn-icons"
+description = "CairnLauncher version icons: hand-drawn vector art with colors taken from the theme"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+cairn-ui.workspace = true
+png = { version = "0.18", default-features = false }

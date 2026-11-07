@@ -1,0 +1,26 @@
+# Whitelist mode: ignore everything at the root by default and allow only the entries listed below.
+# To track a new top-level file or directory, add a `!/name` line here.
+/*
+!/.gitignore
+!/.cargo/
+!/Cargo.toml
+!/Cargo.lock
+!/rustfmt.toml
+!/LICENSE*
+!/COPYING*
+!/README.md
+!/README.zh-CN.md
+!/PRIVACY.md
+!/PRIVACY.en.md
+!/TERMS.md
+!/TERMS.en.md
+!/update.json
+!/docs/
+!/crates/
+!/scripts/
+!/assets/
+
+# Still exclude these inside the allowed directories.
+**/target/
+*.part
+*.tmp

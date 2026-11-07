@@ -1,0 +1,15 @@
+[package]
+name = "cairn-ui"
+description = "Lightweight retained-mode Rust GUI library"
+version.workspace = true
+edition.workspace = true
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/xiaojiang233/cairn-ui"
+publish.workspace = true
+
+[dependencies]
+cairn-ui-platform = { workspace = true }
+cairn-ui-render = { workspace = true }
+cairn-ui-layout = { workspace = true }
+slotmap = { workspace = true }
+unicode-segmentation = { workspace = true }

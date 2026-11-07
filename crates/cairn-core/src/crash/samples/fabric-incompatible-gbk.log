@@ -1,0 +1,18 @@
+[20:11:13] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.15.11
+[20:11:13] [main/INFO]: Fabric is preparing JARs on first launch, this may take a few seconds...
+[20:11:13] [main/WARN]: Mod resolution failed
+[20:11:13] [main/INFO]: Immediate reason: [HARD_DEP_NO_CANDIDATE fabric-api 0.92.12+1.20.1 {depends fabricloader @ [>=0.16.10]}, ROOT_FORCELOAD_SINGLE fabric-api 0.92.12+1.20.1]
+[20:11:13] [main/INFO]: Reason: [HARD_DEP fabric-api 0.92.12+1.20.1 {depends fabricloader @ [>=0.16.10]}, HARD_DEP fabric-object-builder-api-v1 11.1.5+e35120df77 {depends fabricloader @ [>=0.16.10]}]
+[20:11:13] [main/INFO]: Fix: add [], remove [], replace [[fabricloader 0.15.11] -> add:fabricloader 0.16.10 ([[0.16.10,∞)])]
+[20:11:13] [main/ERROR]: Incompatible mods found!
+net.fabricmc.loader.impl.FormattedException: Some of your mods are incompatible with the game or each other!
+确定了一种可能的解决方法，这样做可能会解决你的问题：
+	 - 将 模组 'Fabric Loader' (fabricloader) 0.15.11 替换为 0.16.10 及以上版本。
+更多信息：
+	 - 模组 'Fabric API' (fabric-api) 0.92.12+1.20.1 需要 模组 'Fabric Loader' (fabricloader) 的 0.16.10 及以上版本，但已经安装了的版本 0.15.11 不对！
+	 - 模组 'Fabric Object Builder API (v1)' (fabric-object-builder-api-v1) 11.1.5+e35120df77 需要 模组 'Fabric Loader' (fabricloader) 的 0.16.10 及以上版本，但已经安装了的版本 0.15.11 不对！
+	at net.fabricmc.loader.impl.FormattedException.ofLocalized(FormattedException.java:51) ~[fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:195) ~[fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:146) ~[fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68) ~[fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) ~[fabric-loader-0.15.11.jar:?]

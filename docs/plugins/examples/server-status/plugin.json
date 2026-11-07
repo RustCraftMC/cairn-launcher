@@ -1,0 +1,30 @@
+{
+  "id": "example.server-status",
+  "name": "Server status",
+  "version": "1.1.0",
+  "description": "Shows whether a Minecraft server is online and how many players are on it. The server and refresh interval are settings.",
+  "author": "CairnLauncher",
+  "api": 1,
+  "main": "main.js",
+  "permissions": ["network"],
+  "settings": [
+    { "id": "host", "title": "Server address", "type": "string", "default": "mc.hypixel.net", "placeholder": "play.example.com" },
+    { "id": "interval", "title": "Refresh every (seconds)", "type": "number", "min": 30, "max": 600, "step": 30, "default": 60 }
+  ],
+  "widgets": [
+    {
+      "id": "status",
+      "name": "Server status",
+      "icon": "server",
+      "size": [4, 2],
+      "view": [
+        { "element": "text", "text": "{data.host}", "weight": "bold" },
+        { "element": "text", "text": "{data.state}", "size": 22 },
+        { "element": "progress", "bind": "players", "max": 100 },
+        { "element": "text", "text": "{data.updated}", "color": "secondary" },
+        { "element": "button", "text": "Refresh", "action": { "type": "command", "command": "refresh" } }
+      ]
+    }
+  ],
+  "commands": [{ "id": "refresh", "title": "Refresh now" }]
+}

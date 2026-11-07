@@ -1,0 +1,53 @@
+[package]
+name = "cairn-core"
+description = "CairnLauncher backend core: downloads, installation, accounts, Java, launching, resource management"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[features]
+default = []
+cli = []
+
+[dependencies]
+tokio = { version = "1.54", features = ["rt-multi-thread", "macros", "sync", "time", "fs", "io-util", "process", "net"] }
+tokio-util = { version = "0.7.20", default-features = false }
+# TLS uses the system schannel: no C compiler needed, and the binary is smaller.
+# system-proxy is off: its windows-registry dependency makes GNU-toolchain builds crash at startup,
+# so platform::system_proxy reads the system proxy from the registry instead.
+reqwest = { version = "0.13", default-features = false, features = ["native-tls", "http2", "json", "gzip", "form"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tracing = "0.1"
+sha1 = "0.11"
+sha2 = "0.11"
+md-5 = "0.11"
+uuid = { version = "1.29", features = ["v4"] }
+regex-lite = "0.1.9"
+zip = { version = "9", default-features = false, features = ["deflate-flate2-zlib-rs"] }
+toml = { version = "1", default-features = false, features = ["parse", "serde"] }
+[target.'cfg(not(windows))'.dependencies]
+aes-gcm = "0.10"
+encoding_rs = "0.8"
+libc = "0.2"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = [
+    "Win32_Foundation",
+    "Win32_Security_Cryptography",
+    "Win32_System_SystemInformation",
+    "Win32_System_Registry",
+    "Win32_System_DataExchange",
+    "Win32_System_Memory",
+    "Win32_System_SystemServices",
+    "Win32_System_Time",
+    "Win32_Storage_FileSystem",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Shell",
+    "Win32_UI_HiDpi",
+    "Win32_Globalization",
+] }
+
+[dev-dependencies]
+tokio = { version = "1.54", features = ["rt-multi-thread", "macros", "test-util"] }

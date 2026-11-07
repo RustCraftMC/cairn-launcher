@@ -1,0 +1,166 @@
+---- Minecraft Crash Report ----
+// Embeddium instance tainted by mods: [oculus, embeddium_extra]
+// Please do not reach out for Embeddium support without removing these mods first.
+// -------
+// Shall we play a game?
+
+Time: 2026-09-12 15:11:35
+Description: Unexpected error
+
+java.lang.NullPointerException: Cannot invoke "com.heypixel.heypixelmod.😽😿😾😽😹😼😺😹😼😾😸😺😼😽😿😺😺🙀😺😹😹😼🙀😿😼🙀😿😽😺😻😾😸😼😾😾.getGeoModel()" because "a" is null
+	at com.heypixel.heypixelmod.😿😻😹😺😸😾😼😻😿😽😿😿😿😻😹😹😼😺😻😾😼😸😺😽😸😼😼😼😾😺😽🙀😾😸🙀.🙀🙀😻😼😸😸😾😹😽😸😸😿😺😼😾🙀😿😼😾🙀😿🙀😼😻😸😿😼😽😻😻😽😿🙀😽😿(😿😻😹😺😸😾😼😻😿😽😿😿😿😻😹😹😼😺😻😾😼😸😺😽😸😼😼😼😾😺😽🙀😾😸🙀.java) ~[4690287328241054167@2@8.jar%23176!/:1.0-SNAPSHOT] {re:classloading}
+	at com.heypixel.heypixelmod.__😿😻😹😺😸😾😼😻😿😽😿😿😿😻😹😹😼😺😻😾😼😸😺😽😸😼😼😼😾😺😽🙀😾😸🙀_🙀🙀😻😼😸😸😾😹😽😸😸😿😺😼😾🙀😿😼😾🙀😿🙀😼😻😸😿😼😽😻😻😽😿🙀😽😿_RenderArmEvent.invoke(.dynamic) ~[4690287328241054167@2@8.jar%23176!/:1.0-SNAPSHOT] {re:classloading,pl:eventbus:B}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.5.jar%2387!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.5.jar%2387!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.5.jar%2387!/:?] {}
+	at net.minecraftforge.client.ForgeHooksClient.renderSpecificFirstPersonArm(ForgeHooksClient.java:306) ~[forge-1.20.1-47.3.0-universal.jar%23191!/:?] {re:mixin,re:classloading,pl:mixin:A}
+	at net.minecraft.client.renderer.entity.player.PlayerRenderer.m_117770_(PlayerRenderer.java:175) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:heypixel.mixins.json:iiiiIiiiIIIiiiiiiiIiiiiIiIIiiIiiiiIiIIiiIIiIIIIiiIiiiiiiiIii,pl:mixin:APP:waveycapes.mixins.json:PlayerRendererMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.ItemInHandRenderer.m_109346_(ItemInHandRenderer.java:239) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:mixins.oculus.json:MixinItemInHandRenderer,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.ItemInHandRenderer.m_109371_(ItemInHandRenderer.java:366) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:mixins.oculus.json:MixinItemInHandRenderer,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.ItemInHandRenderer.m_109314_(ItemInHandRenderer.java:317) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:mixins.oculus.json:MixinItemInHandRenderer,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.redirect$zok000$iris$disableVanillaHandRendering(GameRenderer.java:4534) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:heypixel.mixins.json:iiIiiiiIiIiIIiIIiiiIiIiiiiIIiIIIIiIiIIiiIIiIIiiiIiIiiiiIIiII,pl:mixin:APP:obs_overlay.mixins.json:IIiiiiiIIIiiIIiiiiIiIiIiIIIIIiiIiiIiiiiIiIIiiiiIiIiIiIIIIIii,pl:mixin:APP:obs_overlay.mixins.json:IIIiiiiIiiIIiIIIIiiiIiiiiiIiiIIiIIIIIIIIIiIIIIiiiIiiiiiIiiII,pl:mixin:APP:sodium-extra.mixins.json:prevent_shaders.MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:GameRendererAccessor,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:MixinModelViewBobbing,pl:mixin:APP:embeddium.mixins.json:features.gui.hooks.console.GameRendererMixin,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer_NightVisionCompat,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.m_109120_(GameRenderer.java:852) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:heypixel.mixins.json:iiIiiiiIiIiIIiIIiiiIiIiiiiIIiIIIIiIiIIiiIIiIIiiiIiIiiiiIIiII,pl:mixin:APP:obs_overlay.mixins.json:IIiiiiiIIIiiIIiiiiIiIiIiIIIIIiiIiiIiiiiIiIIiiiiIiIiIiIIIIIii,pl:mixin:APP:obs_overlay.mixins.json:IIIiiiiIiiIIiIIIIiiiIiiiiiIiiIIiIIIIIIIIIiIIIIiiiIiiiiiIiiII,pl:mixin:APP:sodium-extra.mixins.json:prevent_shaders.MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:GameRendererAccessor,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:MixinModelViewBobbing,pl:mixin:APP:embeddium.mixins.json:features.gui.hooks.console.GameRendererMixin,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer_NightVisionCompat,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.m_109089_(GameRenderer.java:1132) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:heypixel.mixins.json:iiIiiiiIiIiIIiIIiiiIiIiiiiIIiIIIIiIiIIiiIIiIIiiiIiIiiiiIIiII,pl:mixin:APP:obs_overlay.mixins.json:IIiiiiiIIIiiIIiiiiIiIiIiIIIIIiiIiiIiiiiIiIIiiiiIiIiIiIIIIIii,pl:mixin:APP:obs_overlay.mixins.json:IIIiiiiIiiIIiIIIIiiiIiiiiiIiiIIiIIIIIIIIIiIIIIiiiIiiiiiIiiII,pl:mixin:APP:sodium-extra.mixins.json:prevent_shaders.MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:GameRendererAccessor,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:MixinModelViewBobbing,pl:mixin:APP:embeddium.mixins.json:features.gui.hooks.console.GameRendererMixin,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer_NightVisionCompat,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.m_109093_(GameRenderer.java:909) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:heypixel.mixins.json:iiIiiiiIiIiIIiIIiiiIiIiiiiIIiIIIIiIiIIiiIIiIIiiiIiIiiiiIIiII,pl:mixin:APP:obs_overlay.mixins.json:IIiiiiiIIIiiIIiiiiIiIiIiIIIIIiiIiiIiiiiIiIIiiiiIiIiIiIIIIIii,pl:mixin:APP:obs_overlay.mixins.json:IIIiiiiIiiIIiIIIIiiiIiiiiiIiiIIiIIIIIIIIIiIIIIiiiIiiiiiIiiII,pl:mixin:APP:sodium-extra.mixins.json:prevent_shaders.MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:GameRendererAccessor,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:MixinModelViewBobbing,pl:mixin:APP:embeddium.mixins.json:features.gui.hooks.console.GameRendererMixin,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer_NightVisionCompat,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91383_(Minecraft.java:1146) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:ixeris.mixins.json:MinecraftMixin,pl:mixin:APP:heypixel.mixins.json:iIIIiIIIiiIiIiIiiIIIiiiIIIIiIIiiiiIIIIiIIIiIIiIIiiiIiIiiIIIi,pl:mixin:APP:heypixel.mixins.json:iIiIIIIiIIiIIIiiiIIiIiiiiiIIiiIiiiiIiiiIIIIiiiIIiIiiiiiIIiiI,pl:mixin:APP:obs_overlay.mixins.json:iIIiIiIIIiiiiIiIIiIIIiiIIiIIIIIIiiiiIIiIiiIiIIiIIIiiIIiIIIII,pl:mixin:APP:waveycapes.mixins.json:PlayerRenderStateMixin,pl:mixin:APP:sodium-extra.mixins.json:gui.MinecraftClientAccessor,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_PipelineManagement,pl:mixin:APP:embeddium.mixins.json:core.render.MinecraftAccessor,pl:mixin:APP:embeddium.mixins.json:core.MinecraftClientMixin,pl:mixin:APP:imblocker-forge.mixins.json:MinecraftClientMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:718) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:ixeris.mixins.json:MinecraftMixin,pl:mixin:APP:heypixel.mixins.json:iIIIiIIIiiIiIiIiiIIIiiiIIIIiIIiiiiIIIIiIIIiIIiIIiiiIiIiiIIIi,pl:mixin:APP:heypixel.mixins.json:iIiIIIIiIIiIIIiiiIIiIiiiiiIIiiIiiiiIiiiIIIIiiiIIiIiiiiiIIiiI,pl:mixin:APP:obs_overlay.mixins.json:iIIiIiIIIiiiiIiIIiIIIiiIIiIIIIIIiiiiIIiIiiIiIIiIIIiiIIiIIIII,pl:mixin:APP:waveycapes.mixins.json:PlayerRenderStateMixin,pl:mixin:APP:sodium-extra.mixins.json:gui.MinecraftClientAccessor,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_PipelineManagement,pl:mixin:APP:embeddium.mixins.json:core.render.MinecraftAccessor,pl:mixin:APP:embeddium.mixins.json:core.MinecraftClientMixin,pl:mixin:APP:imblocker-forge.mixins.json:MinecraftClientMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at java.lang.Thread.run(Thread.java:833) ~[?:?] {re:mixin}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Suspected Mods: 
+	Oculus (oculus), Version: 1.7.0
+		Issue tracker URL: https://github.com/Asek3/Oculus/issues
+		Mixin class: net.irisshaders.iris.mixin.MixinGameRenderer
+		Target: net.minecraft.client.renderer.GameRenderer
+		at TRANSFORMER/minecraft@1.20.1/net.minecraft.client.renderer.GameRenderer.redirect$zok000$iris$disableVanillaHandRendering(GameRenderer.java:4534)
+
+	HeyPixelMod (heypixel), Version: 1.0-SNAPSHOT
+		at TRANSFORMER/heypixel@1.0-SNAPSHOT/com.heypixel.heypixelmod.😿😻😹😺😸😾😼😻😿😽😿😿😿😻😹😹😼😺😻😾😼😸😺😽😸😼😼😼😾😺😽🙀😾😸🙀.🙀🙀😻😼😸😸😾😹😽😸😸😿😺😼😾🙀😿😼😾🙀😿🙀😼😻😸😿😼😽😻😻😽😿🙀😽😿(😿😻😹😺😸😾😼😻😿😽😿😿😿😻😹😹😼😺😻😾😼😸😺😽😸😼😼😼😾😺😽🙀😾😸🙀.java)
+Stacktrace:
+	at com.heypixel.heypixelmod.😿😻😹😺😸😾😼😻😿😽😿😿😿😻😹😹😼😺😻😾😼😸😺😽😸😼😼😼😾😺😽🙀😾😸🙀.🙀🙀😻😼😸😸😾😹😽😸😸😿😺😼😾🙀😿😼😾🙀😿🙀😼😻😸😿😼😽😻😻😽😿🙀😽😿(😿😻😹😺😸😾😼😻😿😽😿😿😿😻😹😹😼😺😻😾😼😸😺😽😸😼😼😼😾😺😽🙀😾😸🙀.java) ~[4690287328241054167@2@8.jar%23176!/:1.0-SNAPSHOT] {re:classloading}
+	at com.heypixel.heypixelmod.__😿😻😹😺😸😾😼😻😿😽😿😿😿😻😹😹😼😺😻😾😼😸😺😽😸😼😼😼😾😺😽🙀😾😸🙀_🙀🙀😻😼😸😸😾😹😽😸😸😿😺😼😾🙀😿😼😾🙀😿🙀😼😻😸😿😼😽😻😻😽😿🙀😽😿_RenderArmEvent.invoke(.dynamic) ~[4690287328241054167@2@8.jar%23176!/:1.0-SNAPSHOT] {re:classloading,pl:eventbus:B}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.5.jar%2387!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.5.jar%2387!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.5.jar%2387!/:?] {}
+	at net.minecraftforge.client.ForgeHooksClient.renderSpecificFirstPersonArm(ForgeHooksClient.java:306) ~[forge-1.20.1-47.3.0-universal.jar%23191!/:?] {re:mixin,re:classloading,pl:mixin:A}
+	at net.minecraft.client.renderer.entity.player.PlayerRenderer.m_117770_(PlayerRenderer.java:175) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:heypixel.mixins.json:iiiiIiiiIIIiiiiiiiIiiiiIiIIiiIiiiiIiIIiiIIiIIIIiiIiiiiiiiIii,pl:mixin:APP:waveycapes.mixins.json:PlayerRendererMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.ItemInHandRenderer.m_109346_(ItemInHandRenderer.java:239) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:mixins.oculus.json:MixinItemInHandRenderer,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.ItemInHandRenderer.m_109371_(ItemInHandRenderer.java:366) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:mixins.oculus.json:MixinItemInHandRenderer,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.ItemInHandRenderer.m_109314_(ItemInHandRenderer.java:317) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:mixins.oculus.json:MixinItemInHandRenderer,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.redirect$zok000$iris$disableVanillaHandRendering(GameRenderer.java:4534) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:heypixel.mixins.json:iiIiiiiIiIiIIiIIiiiIiIiiiiIIiIIIIiIiIIiiIIiIIiiiIiIiiiiIIiII,pl:mixin:APP:obs_overlay.mixins.json:IIiiiiiIIIiiIIiiiiIiIiIiIIIIIiiIiiIiiiiIiIIiiiiIiIiIiIIIIIii,pl:mixin:APP:obs_overlay.mixins.json:IIIiiiiIiiIIiIIIIiiiIiiiiiIiiIIiIIIIIIIIIiIIIIiiiIiiiiiIiiII,pl:mixin:APP:sodium-extra.mixins.json:prevent_shaders.MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:GameRendererAccessor,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:MixinModelViewBobbing,pl:mixin:APP:embeddium.mixins.json:features.gui.hooks.console.GameRendererMixin,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer_NightVisionCompat,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.m_109120_(GameRenderer.java:852) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:heypixel.mixins.json:iiIiiiiIiIiIIiIIiiiIiIiiiiIIiIIIIiIiIIiiIIiIIiiiIiIiiiiIIiII,pl:mixin:APP:obs_overlay.mixins.json:IIiiiiiIIIiiIIiiiiIiIiIiIIIIIiiIiiIiiiiIiIIiiiiIiIiIiIIIIIii,pl:mixin:APP:obs_overlay.mixins.json:IIIiiiiIiiIIiIIIIiiiIiiiiiIiiIIiIIIIIIIIIiIIIIiiiIiiiiiIiiII,pl:mixin:APP:sodium-extra.mixins.json:prevent_shaders.MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:GameRendererAccessor,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:MixinModelViewBobbing,pl:mixin:APP:embeddium.mixins.json:features.gui.hooks.console.GameRendererMixin,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer_NightVisionCompat,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.m_109089_(GameRenderer.java:1132) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:heypixel.mixins.json:iiIiiiiIiIiIIiIIiiiIiIiiiiIIiIIIIiIiIIiiIIiIIiiiIiIiiiiIIiII,pl:mixin:APP:obs_overlay.mixins.json:IIiiiiiIIIiiIIiiiiIiIiIiIIIIIiiIiiIiiiiIiIIiiiiIiIiIiIIIIIii,pl:mixin:APP:obs_overlay.mixins.json:IIIiiiiIiiIIiIIIIiiiIiiiiiIiiIIiIIIIIIIIIiIIIIiiiIiiiiiIiiII,pl:mixin:APP:sodium-extra.mixins.json:prevent_shaders.MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:GameRendererAccessor,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:MixinModelViewBobbing,pl:mixin:APP:embeddium.mixins.json:features.gui.hooks.console.GameRendererMixin,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer_NightVisionCompat,pl:mixin:A,pl:runtimedistcleaner:A}
+-- Affected level --
+Details:
+	All players: 1 total; [LocalPlayer['Steve'/1, l='ClientLevel', x=10.44, y=-59.00, z=9.51]]
+	Chunk stats: 361, 201
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (1024,64,0), Section: (at 0,0,0 in 64,4,0; chunk contains blocks 1024,-64,0 to 1039,319,15), Region: (2,0; contains chunks 64,0 to 95,31, blocks 1024,-64,0 to 1535,319,511)
+	Level time: 755557 game time, 6000 day time
+	Server brand: TensorPowered
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.ClientLevel.m_6026_(ClientLevel.java:455) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:embeddium.mixins.json:features.render.world.ClientLevelMixin,pl:mixin:APP:entityculling.mixins.json:ClientWorldMixin,pl:mixin:APP:mixins.oculus.vertexformat.json:block_rendering.MixinClientLevel,pl:mixin:APP:embeddium.mixins.json:core.world.biome.ClientWorldMixin,pl:mixin:APP:embeddium.mixins.json:core.world.map.ClientWorldMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91354_(Minecraft.java:2319) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:ixeris.mixins.json:MinecraftMixin,pl:mixin:APP:heypixel.mixins.json:iIIIiIIIiiIiIiIiiIIIiiiIIIIiIIiiiiIIIIiIIIiIIiIIiiiIiIiiIIIi,pl:mixin:APP:heypixel.mixins.json:iIiIIIIiIIiIIIiiiIIiIiiiiiIIiiIiiiiIiiiIIIIiiiIIiIiiiiiIIiiI,pl:mixin:APP:obs_overlay.mixins.json:iIIiIiIIIiiiiIiIIiIIIiiIIiIIIIIIiiiiIIiIiiIiIIiIIIiiIIiIIIII,pl:mixin:APP:waveycapes.mixins.json:PlayerRenderStateMixin,pl:mixin:APP:sodium-extra.mixins.json:gui.MinecraftClientAccessor,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_PipelineManagement,pl:mixin:APP:embeddium.mixins.json:core.render.MinecraftAccessor,pl:mixin:APP:embeddium.mixins.json:core.MinecraftClientMixin,pl:mixin:APP:imblocker-forge.mixins.json:MinecraftClientMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:740) ~[client-1.20.1-20230612.114412-srg.jar%23186!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:ixeris.mixins.json:MinecraftMixin,pl:mixin:APP:heypixel.mixins.json:iIIIiIIIiiIiIiIiiIIIiiiIIIIiIIiiiiIIIIiIIIiIIiIIiiiIiIiiIIIi,pl:mixin:APP:heypixel.mixins.json:iIiIIIIiIIiIIIiiiIIiIiiiiiIIiiIiiiiIiiiIIIIiiiIIiIiiiiiIIiiI,pl:mixin:APP:obs_overlay.mixins.json:iIIiIiIIIiiiiIiIIiIIIiiIIiIIIIIIiiiiIIiIiiIiIIiIIIiiIIiIIIII,pl:mixin:APP:waveycapes.mixins.json:PlayerRenderStateMixin,pl:mixin:APP:sodium-extra.mixins.json:gui.MinecraftClientAccessor,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_PipelineManagement,pl:mixin:APP:embeddium.mixins.json:core.render.MinecraftAccessor,pl:mixin:APP:embeddium.mixins.json:core.MinecraftClientMixin,pl:mixin:APP:imblocker-forge.mixins.json:MinecraftClientMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at java.lang.Thread.run(Thread.java:833) ~[?:?] {re:mixin}
+
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: vanilla, file/濯卿觎1.20.1布吉岛材质.zip, file/ViaBackwards-Plus.zip, mod_resources
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.1
+	Minecraft Version ID: 1.20.1
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 17.0.2, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 3198194568 bytes (3050 MiB) / 3925868544 bytes (3744 MiB) up to 8589934592 bytes (8192 MiB)
+	CPUs: 28
+	Processor Vendor: Intel64
+	Processor Name: Intel(R) Core(TM) i5-12600K
+	Identifier: Intel64 Family 6 Model 151 Stepping 2
+	Microarchitecture: Alder Lake
+	Frequency (GHz): 0.00
+	Number of physical packages: 1
+	Number of physical CPUs: 20
+	Number of logical CPUs: 28
+	Graphics card #0 name: NVIDIA GeForce RTX 4070 SUPER
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x2783
+	Graphics card #0 versionInfo: DriverVersion=32.0.16.1088
+	Memory slot #0 capacity (MB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 4.80
+	Memory slot #0 type: Unknown
+	Memory slot #1 capacity (MB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 4.80
+	Memory slot #1 type: Unknown
+	Virtual memory max (MB): 34655.09
+	Virtual memory used (MB): 21211.36
+	Swap memory total (MB): 2048.00
+	Swap memory used (MB): 28.10
+	JVM Flags: 10 total; -Xmx8192M -Xmn128M -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	Loaded Shaderpack: (off)
+	Launched Version: 1.20
+	Backend library: LWJGL version 3.3.1 build 7
+	Backend API: NVIDIA GeForce RTX 4070 SUPER/PCIe/SSE2 GL version 3.2.0 NVIDIA 610.88, NVIDIA Corporation
+	Window size: 1920x1009
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	Graphics mode: fast
+	Resource Packs: vanilla, file/濯卿觎1.20.1布吉岛材质.zip, file/ViaBackwards-Plus.zip (incompatible), vanilla, mod_resources, file/濯卿觎1.20.1布吉岛材质.zip, file/ViaBackwards-Plus.zip (incompatible)
+	Current Language: zh_cn
+	CPU: 28x Intel(R) Core(TM) i5-12600K
+	ModLauncher: 10.1.2+0+netease_10.1.d0e91c79
+	ModLauncher launch target: forgeclient
+	ModLauncher naming: srg
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.5.jar eventbus PLUGINSERVICE 
+		fmlloader-1.20.1-47.3.0.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.20.1-47.3.0.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.20.1-47.3.0.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.20.1-47.3.0.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.20.1-47.3.0.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.9.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.9.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		client-1.20.1-20230612.114412-srg.jar             |Minecraft                     |minecraft                     |1.20.1              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		4690287328360420515@2@8.jar                       |Saturn                        |saturn                        |0.1.3               |DONE      |Manifest: NOSIGNATURE
+		4690287328369727721@2@8.jar                       |ViaForge                      |viaforge                      |4.3.1-SNAPSHOT      |DONE      |Manifest: NOSIGNATURE
+		4690287328230518618@2@8.jar                       |GeckoLib 4                    |geckolib                      |4.7-netease         |DONE      |Manifest: NOSIGNATURE
+		4690287328241054167@2@8.jar                       |HeyPixelMod                   |heypixel                      |1.0-SNAPSHOT        |DONE      |Manifest: NOSIGNATURE
+		4690287328210962158@2@8.jar                       |EntityCulling                 |entityculling                 |1.7.3               |DONE      |Manifest: NOSIGNATURE
+		4690372021023046883@3@0.jar                       |netease_official              |netease_official              |1.20                |DONE      |Manifest: NOSIGNATURE
+		4690287328385556548@2@8.jar                       |WaveyCapes                    |waveycapes                    |1.5.1               |DONE      |Manifest: NOSIGNATURE
+		4690287328220838731@2@8.jar                       |Ferrite Core                  |ferritecore                   |6.0.1               |DONE      |Manifest: 41:ce:50:66:d1:a0:05:ce:a1:0e:02:85:9b:46:64:e0:bf:2e:cf:60:30:9a:fe:0c:27:e0:63:66:9a:84:ce:8a
+		4690287328350258237@2@8.jar                       |Embeddium Extra               |embeddium_extra               |0.5.4.4+mc1.20.1-bui|DONE      |Manifest: NOSIGNATURE
+		4690287328317931508@2@8.jar                       |Ixeris                        |ixeris                        |4.6.5+1.20.1-forge  |DONE      |Manifest: NOSIGNATURE
+		4690287328189015853@2@8.jar                       |Cloth Config v10 API          |cloth_config                  |11.1.136            |DONE      |Manifest: NOSIGNATURE
+		forge-1.20.1-47.3.0-universal.jar                 |Forge                         |forge                         |47.3.0              |DONE      |Manifest: 84:ce:76:e8:45:35:e4:0e:63:86:df:47:59:80:0f:67:6c:c1:5f:6e:5f:4d:b3:54:47:1a:9f:7f:ed:5e:f2:90
+		4690287328328757619@2@8.jar                       |ObServerSystem                |observer_system               |0.1.0               |DONE      |Manifest: NOSIGNATURE
+		4690287328200020773@2@8.jar                       |Embeddium                     |embeddium                     |0.3.31+mc1.20.1     |DONE      |Manifest: NOSIGNATURE
+		4690287328338162144@2@8.jar                       |Oculus                        |oculus                        |1.7.0               |DONE      |Manifest: NOSIGNATURE
+		4690287328307795398@2@8.jar                       |IMBlocker                     |imblocker                     |5.4.4               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: d15bcef8-c4d8-4137-afcf-32b65b320abf
+	FML: 47.3
+	Forge: net.minecraftforge:47.3.0

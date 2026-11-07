@@ -1,0 +1,81 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/cairn-core",
+    "crates/cairn-cli",
+    "crates/cairn-bridge",
+    "crates/cairn-icons",
+    "crates/cairn-i18n",
+    "crates/cairn-app",
+    "crates/cairn-ui",
+    "crates/cairn-ui-layout",
+    "crates/cairn-ui-platform",
+    "crates/cairn-ui-render",
+    "crates/cairn-plugin",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "LGPL-3.0-only"
+publish = false
+
+[workspace.dependencies]
+cairn-core = { path = "crates/cairn-core" }
+cairn-bridge = { path = "crates/cairn-bridge" }
+cairn-icons = { path = "crates/cairn-icons" }
+cairn-i18n = { path = "crates/cairn-i18n" }
+cairn-plugin = { path = "crates/cairn-plugin" }
+# cairn-ui is taken from github.com/xiaojiang233/cairn-ui (main, 78e7508) and maintained here.
+# This copy adds OpenGL presentation and GPU compositing of background blur and glass.
+cairn-ui = { path = "crates/cairn-ui" }
+cairn-ui-platform = { path = "crates/cairn-ui-platform" }
+cairn-ui-render = { path = "crates/cairn-ui-render" }
+cairn-ui-layout = { path = "crates/cairn-ui-layout" }
+
+# cairn-ui's dependencies below. Versions and features match its original workspace.
+winit = { version = "0.30.13", default-features = false, features = ["rwh_06"] }
+softbuffer = { version = "0.4.8", default-features = false }
+glutin = { version = "0.32.3", default-features = false, features = ["wgl"] }
+glutin-winit = { version = "0.5.0", default-features = false, features = ["wgl"] }
+glow = "0.18.0"
+raw-window-handle = "0.6.2"
+tiny-skia = { version = "0.12.0", default-features = false, features = ["std", "simd"] }
+cosmic-text = { version = "0.19.0", default-features = false, features = ["std", "swash"] }
+taffy = { version = "0.15.1", default-features = false, features = ["std", "taffy_tree", "flexbox"] }
+slotmap = "1.1"
+unicode-segmentation = "1.13"
+sys-locale = "0.3"
+windows-sys = { version = "0.61", features = [
+    "Win32_Foundation",
+    "Win32_System_DataExchange",
+    "Win32_System_Memory",
+    "Win32_System_Ole",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_WindowsAndMessaging",
+] }
+
+[profile.release]
+opt-level = "z"
+lto = "fat"
+codegen-units = 1
+strip = true
+panic = "abort"
+
+# opt-level "z" keeps the binary small; render hot spots use opt-level 2 for 60 fps.
+[profile.release.package.tiny-skia]
+opt-level = 2
+
+[profile.release.package.tiny-skia-path]
+opt-level = 2
+
+[profile.release.package.cairn-ui-render]
+opt-level = 2
+
+# Dev builds optimize deps too: hashing and unpacking are ~10x slower in debug and skew timings.
+[profile.dev.package."*"]
+opt-level = 2
+
+# cairn-ui per-pixel loops (shadows, blending) run ~10x slower in debug, so animations stutter.
+[profile.dev.package.cairn-ui-render]
+opt-level = 2

@@ -1,0 +1,31 @@
+{
+  "id": "example.launch-tuner",
+  "name": "Launch tuner",
+  "version": "1.1.0",
+  "description": "Adds JVM flags to every launch, opens windowed games at a size you choose and records how the last session ended, including crash causes.",
+  "author": "CairnLauncher",
+  "api": 1,
+  "main": "main.js",
+  "permissions": ["launch", "game"],
+  "settings": [
+    { "id": "utf8", "title": "Force UTF-8 output", "type": "boolean", "default": true },
+    { "id": "size", "title": "Window size", "type": "choice", "default": "1280x720", "options": [
+      { "value": "keep", "label": "Keep" },
+      { "value": "1280x720", "label": "1280×720" },
+      { "value": "1600x900", "label": "1600×900" },
+      { "value": "1920x1080", "label": "1920×1080" }
+    ] }
+  ],
+  "widgets": [
+    {
+      "id": "last-session",
+      "name": "Last session",
+      "icon": "gamepad",
+      "size": [4, 2],
+      "view": [
+        { "element": "text", "text": "{data.instance}", "weight": "bold" },
+        { "element": "text", "text": "{data.result}", "color": "secondary" }
+      ]
+    }
+  ]
+}

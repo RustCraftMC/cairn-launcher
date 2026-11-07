@@ -1,0 +1,39 @@
+[package]
+name = "cairn-bridge"
+description = "Bridge between the CairnLauncher UI and cairn-core: UI state model and non-blocking operations"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+cairn-core.workspace = true
+cairn-i18n.workspace = true
+tracing = "0.1"
+tokio = { version = "1.54", features = ["rt-multi-thread", "macros", "sync", "time", "fs"] }
+# Only CancellationToken is used, as in cairn-core.
+tokio-util = { version = "0.7.20", default-features = false }
+# Same version and features as cairn-core, so it is not compiled twice.
+zip = { version = "9", default-features = false, features = ["deflate-flate2-zlib-rs"] }
+flate2 = { version = "1", default-features = false, features = ["zlib-rs"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.13", default-features = false, features = ["native-tls", "http2", "json", "gzip", "form"] }
+# Wallpaper decoding needs only PNG, JPEG and WEBP, so the heavy image crate is not pulled in.
+png = { version = "0.18", default-features = false }
+zune-jpeg = { version = "0.5.15", default-features = false, features = ["std", "x86"] }
+image-webp = { version = "0.2.4", default-features = false }
+serde_yaml = "0.9.34"
+cairn-plugin.workspace = true
+
+[target.'cfg(not(windows))'.dependencies]
+libc = "0.2"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = [
+    "Win32_Foundation",
+    "Win32_System_Com",
+    "Win32_System_Registry",
+    "Win32_System_SystemInformation",
+    "Win32_UI_Controls_Dialogs",
+    "Win32_UI_Shell_Common",
+] }

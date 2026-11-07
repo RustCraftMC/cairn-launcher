@@ -1,0 +1,11 @@
+[package]
+name = "cairn-ui-layout"
+description = "cairn-ui layout layer: a thin wrapper around taffy"
+version.workspace = true
+edition.workspace = true
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/xiaojiang233/cairn-ui"
+publish.workspace = true
+
+[dependencies]
+taffy = { workspace = true }

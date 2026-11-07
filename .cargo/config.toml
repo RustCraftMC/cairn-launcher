@@ -1,0 +1,5 @@
+[target.'cfg(all(target_os = "windows", target_env = "msvc"))']
+rustflags = [
+    "-C", "link-arg=/OPT:REF",
+    "-C", "link-arg=/OPT:ICF",
+]
