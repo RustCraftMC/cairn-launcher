@@ -1,10 +1,10 @@
 {
   "version": "0.1.0",
-  "publish_time": "2026-11-07T12:00:00Z",
+  "publish_time": "2026-11-07T15:04:43Z",
   "min_compatible_version": "0.1.0",
   "changelog": {
-    "zh-CN": "CairnLauncher 0.1.0 首个公开发布版本：\n- 极致性能：纯 Rust 与软渲染，冷启动约 100ms，内存占用约 15MB\n- 单文件免安装，纯便携设计，数据全聚合于 .cairn 目录\n- 完整支持微软官方登录、外置登录与离线模式\n- 内置轻量版本更新检查与原生就地热替换机制",
-    "en-US": "CairnLauncher 0.1.0 Initial Release:\n- Extreme performance: Pure Rust & software rendering, ~100ms cold start, ~15MB RAM\n- Single-file portable design, all runtime data encapsulated within .cairn\n- Full support for Microsoft OAuth, external auth, and offline profiles\n- Built-in lightweight update checking and native in-place hot-swap"
+    "zh-CN": "CairnLauncher 0.1.0 (Open Beta 公测版)：\n- 极致性能：纯 Rust 与软渲染，冷启动约 100ms，待机内存约 15MB\n- 单文件免安装，纯便携设计，数据全聚合于 .cairn 目录\n- 完整支持微软官方登录、外置登录与离线模式\n- 内置轻量版本更新检查、更新提示弹窗与原生就地热替换机制\n\n> 注意：当前为 Open Beta 首发测试版本，可能存在潜在未知问题，欢迎前往 GitHub Issues 反馈交流！",
+    "en-US": "CairnLauncher 0.1.0 (Open Beta):\n- Extreme performance: Pure Rust & software rendering, ~100ms cold start, ~15MB RAM\n- Single-file portable design, all runtime data encapsulated within .cairn\n- Full support for Microsoft OAuth, external auth, and offline profiles\n- Built-in lightweight update checking, update modal prompt, and native in-place hot-swap\n\n> Note: This is an Open Beta release and may contain unexpected bugs. Feedback on GitHub Issues is warmly welcomed!"
   },
   "platforms": {
     "windows-x86_64": {
@@ -12,8 +12,8 @@
       "mirror_urls": [
         "https://ghfast.top/https://github.com/RustCraftMC/cairn-launcher/releases/download/v0.1.0/CairnLauncher.exe"
       ],
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
-      "size": 6500000
+      "sha256": "c86de57cae835264f72b18cfa665b65e20df881103f159079b6680cf32fb2cad",
+      "size": 10104320
     }
   }
 }
